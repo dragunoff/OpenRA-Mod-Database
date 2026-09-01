@@ -1,0 +1,12 @@
+{
+  "name": "OpenRA mod database",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["sst-dev.opencode", "dbaeumer.vscode-eslint"]
+    }
+  },
+  "postCreateCommand": "npm install"
+}

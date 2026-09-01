@@ -1,0 +1,37 @@
+{
+  "name": "openra-mod-database",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@effect/platform-node": "4.0.0-rc.112",
+    "effect": "4.0.0-rc.112"
+  },
+  "devDependencies": {
+    "@effect/vitest": "4.0.0-rc.112",
+    "@types/node": "^26.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "oxfmt": "^0.65.0",
+    "oxlint": "^1.80.0",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.0",
+    "vitest": "^4.1.0"
+  },
+  "lint-staged": {
+    "*": "oxfmt --no-error-on-unmatched-pattern",
+    "*.{js,jsx,ts,tsx,mjs,cjs}": "oxlint"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
